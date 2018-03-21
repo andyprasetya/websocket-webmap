@@ -4,7 +4,7 @@
   "description": "A WebSocket [RFC 6455] protocol implementation in GeoJSON-push webmap",
   "main": "index.js",
   "scripts": {
-    "test": "node ./index.js",
+    "start": "node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
