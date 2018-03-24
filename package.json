@@ -16,6 +16,7 @@
     "moment",
     "path",
     "pug",
+    "uuid",
     "websocket",
     "ws",
     "xmlhttprequest"
@@ -31,6 +32,7 @@
     "moment": "^2.21.0",
     "path": "^0.12.7",
     "pug": "^2.0.1",
+    "uuid": "^3.2.1",
     "ws": "^5.0.0",
     "xmlhttprequest": "^1.8.0"
   }
