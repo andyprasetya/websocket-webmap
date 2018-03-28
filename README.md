@@ -7,6 +7,6 @@ The server-side packages are [Express](https://expressjs.com), [moment](http://m
 On the client-side, it uses [Leaflet](http://leafletjs.com/), [Leaflet-GroupedLayerControl](https://github.com/ismyrnow/leaflet-groupedlayercontrol), [Leaflet.EasyButton](https://github.com/CliffCloud/Leaflet.EasyButton), mapshakers' [Leaflet-Pulse-Icon](https://github.com/mapshakers/leaflet-icon-pulse), [Leaflet-Hash](https://github.com/mlevans/leaflet-hash) and the awesome [Font Awesome](https://github.com/FortAwesome/Font-Awesome).
 
 ### Screenshot
-![alt text](https://i.imgur.com/XCcILzI.png "Screenshot in Google Chrome")
+![alt text](https://i.imgur.com/kUhIQON.png "Screenshot in Google Chrome")
 
 Well, I think it's just a small step to fully understand the-right-way of WebSocket, and there are still a lot of challenges to beat for a better and efficient application architecture.
