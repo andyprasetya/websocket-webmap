@@ -1,12 +1,17 @@
-var map,openStreetMap,esriWorldImageryMap,zoomControl,attributionControl,scaleControl,layerControl,baseLayers,isCollapsed,
-	earthquakeLayer,pulsingIcon1,pulsingIcon2,pulsingIcon3,mapHash,usgs_geojson_request,inasafe_geojson_request,earthquakes,
+var map,openTopoMap,openStreetMap,esriWorldImageryMap,zoomControl,attributionControl,scaleControl,layerControl,baseLayers,isCollapsed,
+	earthquakeLayer,pulsingIcon1,pulsingIcon2,pulsingIcon3,mapHash,gridxy,usgs_geojson_request,inasafe_geojson_request,earthquakes,
 	websocket,webSocketShifter;
 var bbox_minx = parseFloat(95), bbox_miny = parseFloat(-11), bbox_maxx = parseFloat(141), bbox_maxy = parseFloat(7.5), 
 	centroidx = parseFloat(122), centroidy = parseFloat(-3), mapminzoom = parseInt(3), mapmaxzoom = parseInt(17), mapinitzoom = parseInt(5);
+openTopoMap = new L.TileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+	minZoom: mapminzoom, 
+	maxZoom: mapmaxzoom, 
+	attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+});
 openStreetMap = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	minZoom: mapminzoom, 
 	maxZoom: mapmaxzoom, 
-	attribution: 'OpenStreetMaps'
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 esriWorldImageryMap = new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 	minZoom: mapminzoom, 
@@ -27,6 +32,7 @@ attributionControl = L.control({ position: "bottomright" });
 scaleControl = L.control.scale({ position: "bottomleft", maxWidth: 200, metric: true, imperial: false, updateWhenIdle: false }).addTo(map);
 baseLayers = { "OpenStreetMap": openStreetMap, "ESRI World Imagery": esriWorldImageryMap };
 layerControl = L.control.groupedLayers(baseLayers, { collapsed: isCollapsed }).addTo(map);
+gridxy = new L.Grid().addTo(map);
 if (document.body.clientWidth <= 767) {
 	isCollapsed = true;
 } else {
