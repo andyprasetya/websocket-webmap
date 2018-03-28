@@ -4,7 +4,7 @@ This repo is an implementation of WebSocket in a webmap which is visualising the
 
 The server-side packages are [Express](https://expressjs.com), [moment](http://momentjs.com/), [path](https://github.com/jinder/path), [Pug](https://pugjs.org/), [uuid](https://github.com/kelektiv/node-uuid), [ws](https://github.com/websockets/ws) and [xmlhttprequest](https://github.com/driverdan/node-XMLHttpRequest).
 
-On the client-side, it uses [Leaflet](http://leafletjs.com/), [Leaflet.Grid](https://github.com/jieter/Leaflet.Grid), [Leaflet-GroupedLayerControl](https://github.com/ismyrnow/leaflet-groupedlayercontrol), [Leaflet.EasyButton](https://github.com/CliffCloud/Leaflet.EasyButton), mapshakers' [Leaflet-Pulse-Icon](https://github.com/mapshakers/leaflet-icon-pulse), [Leaflet-Hash](https://github.com/mlevans/leaflet-hash) and the awesome [Font Awesome](https://github.com/FortAwesome/Font-Awesome).
+On the client-side, it uses [Leaflet](http://leafletjs.com/), [Leaflet.Grid](https://github.com/jieter/Leaflet.Grid), [Leaflet-GroupedLayerControl](https://github.com/ismyrnow/leaflet-groupedlayercontrol), [Leaflet.EasyButton](https://github.com/CliffCloud/Leaflet.EasyButton), [mapshakers](https://github.com/mapshakers)' [Leaflet-Pulse-Icon](https://github.com/mapshakers/leaflet-icon-pulse), [Leaflet-Hash](https://github.com/mlevans/leaflet-hash) and the awesome [Font Awesome](https://github.com/FortAwesome/Font-Awesome).
 
 ### Screenshot
 ![alt text](https://i.imgur.com/kUhIQON.png "Screenshot in Google Chrome")
