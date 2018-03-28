@@ -23,7 +23,7 @@ pulsingIcon1 = L.icon.pulse({ iconSize:[10,10], color:'red' });
 pulsingIcon2 = L.icon.pulse({ iconSize:[15,15], color:'red' });
 pulsingIcon3 = L.icon.pulse({ iconSize:[20,20], color:'red' });
 map = L.map('map', {
-	zoom: parseInt(mapinitzoom), center: [parseFloat(centroidy), parseFloat(centroidx)], layers: [openStreetMap,earthquakeLayer],
+	zoom: parseInt(mapinitzoom), center: [parseFloat(centroidy), parseFloat(centroidx)], layers: [openTopoMap,earthquakeLayer],
 	zoomControl: false, minZoom: mapminzoom, maxZoom: mapmaxzoom, zoomControl: false});
 /* uncomment line below to set map's max bbox */
 /* map.setMaxBounds([[parseFloat(bbox_miny), parseFloat(bbox_minx)], [parseFloat(bbox_maxy), parseFloat(bbox_maxx)]]); */
