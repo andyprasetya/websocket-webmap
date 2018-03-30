@@ -35,6 +35,24 @@ websocketserver.on('connection', function connection(websocket) {
 	websocket.on('message', function incoming(message) {
 		console.log('A websocket data request is coming: %s \nBegin to process at '+new Date()+'', message);
 		switch (message) {
+			case 'request_websocket_data_geofongfz':
+				intervalrequest = setInterval(function(){
+					dataurl = "http://geofon.gfz-potsdam.de/eqinfo/list.php?fmt=geojson";
+					xhr.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+							var data = this.responseText;
+							if (websocket.readyState !== websocket.OPEN) {
+								websocket.terminate();
+							} else {
+								websocket.send(data);
+								console.log('Sending data to clientId: '+websocket.id+'...');
+							}
+						}
+					};
+					xhr.open('GET', dataurl);
+					xhr.send();
+				},30*1000);
+				break;
 			case 'request_websocket_data_usgs':
 				intervalrequest = setInterval(function(){
 					startdate = moment.utc().subtract(24,"hours").format("YYYY-MM-DD");
