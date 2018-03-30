@@ -8,6 +8,17 @@ var dataurl,startdate,enddate;
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'MyWebmap' });
 });
+router.get('/latest-geofongfz', function(req, res, next) {
+	dataurl = "http://geofon.gfz-potsdam.de/eqinfo/list.php?fmt=geojson";
+	xhr.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var data = JSON.parse(this.responseText);
+			res.json(data);
+		}
+	};
+	xhr.open('GET', dataurl);
+	xhr.send();
+});
 router.get('/latest-usgs', function(req, res, next) {
 	startdate = moment.utc().subtract(24,"hours").format("YYYY-MM-DD");
 	enddate = moment.utc().format("YYYY-MM-DD");
