@@ -1,6 +1,6 @@
 # websocket-webmap
 ### A Quick-and-(still)-dirty WebSocket ([RFC 6455](https://tools.ietf.org/html/rfc6455)) protocol implementation in GeoJSON-push webmap.
-This repo is an implementation of WebSocket in a webmap which is visualising the USGS (and InaSAFE - see code) earthquake data.
+This repo is an implementation of WebSocket in a webmap which is visualising the [GEOFON GFZ](https://geofon.gfz-potsdam.de/), [USGS](https://earthquake.usgs.gov/earthquakes/map/), and [InaSAFE](http://inasafe.org/) earthquake data.
 
 The server-side packages are [Express](https://expressjs.com), [moment](http://momentjs.com/), [path](https://github.com/jinder/path), [Pug](https://pugjs.org/), [uuid](https://github.com/kelektiv/node-uuid), [ws](https://github.com/websockets/ws) and [xmlhttprequest](https://github.com/driverdan/node-XMLHttpRequest).
 
