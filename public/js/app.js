@@ -29,7 +29,7 @@ map = L.map('map', {
 /* map.setMaxBounds([[parseFloat(bbox_miny), parseFloat(bbox_minx)], [parseFloat(bbox_maxy), parseFloat(bbox_maxx)]]); */
 zoomControl = L.control.zoom({position: "topleft"}).addTo(map);
 attributionControl = L.control({ position: "bottomright" });
-scaleControl = L.control.scale({ position: "bottomleft", maxWidth: 200, metric: true, imperial: false, updateWhenIdle: false }).addTo(map);
+scaleControl = L.control.scale({ position: "bottomleft", maxWidth: 200, metric: true, imperial: true, updateWhenIdle: false }).addTo(map);
 baseLayers = { "OpenTopoMap": openTopoMap, "OpenStreetMap": openStreetMap, "ESRI World Imagery": esriWorldImageryMap };
 layerControl = L.control.groupedLayers(baseLayers, { collapsed: isCollapsed }).addTo(map);
 gridxy = new L.Grid().addTo(map);
