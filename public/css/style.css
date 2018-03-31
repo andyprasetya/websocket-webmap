@@ -10,8 +10,17 @@ html, body {
 	width: 100%;
 	height: 100%;
 }
-.text-primary {
+.text-geofongfz {
+	color: #DC3545;
+}
+.text-inasafe {
+	color: #fD7E14;
+}
+.text-websocket {
 	color: #007BFF;
+}
+.text-usgs {
+	color: #28A745;
 }
 .leaflet-grid-label .lng {
 	margin-left: 8px;
