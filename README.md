@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/andyprasetya/websocket-webmap.svg?branch=master)](https://travis-ci.org/andyprasetya/websocket-webmap)
 # websocket-webmap
 ### A Quick-and-(still)-dirty WebSocket ([RFC 6455](https://tools.ietf.org/html/rfc6455)) protocol implementation in GeoJSON-push webmap.
 This repo is an implementation of WebSocket in a webmap which is visualising the [GEOFON GFZ](https://geofon.gfz-potsdam.de/), [USGS](https://earthquake.usgs.gov/earthquakes/map/), and [InaSAFE](http://inasafe.org/) earthquake data.
